@@ -1,0 +1,56 @@
+.bodyBox {
+    width: 100%;
+    display: flex;
+    gap: 3%;
+    height: 30vh;
+    overflow: hidden;
+    margin: 10px 0px;
+    box-shadow: 0 0 7px 0 #555;
+}
+
+.bodyBoxLeft {
+    width: 40%;
+    aspect-ratio: 16/9;
+}
+
+.bodyBoxLeft img {
+    width: 100%;
+}
+
+.bodyBoxRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.bodyBoxRight h1 {
+    text-transform: capitalize;
+    font-family: sans-serif;
+}
+
+.bodyBoxRight h5 {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.bodyBoxRight p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.quantity {
+    display: flex;
+    gap: 2%;
+}
+
+.quantity button {
+    width: 25px;
+    height: 25px;
+    border: none;
+    outline: none;
+}
+
+.quantity input {
+    width: 50px;
+    outline: none;
+    border: none;
+}

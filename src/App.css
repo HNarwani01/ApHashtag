@@ -75,3 +75,12 @@ i{
   height: 3rem;
   border-radius: 50%;
 }
+.mainBody{
+  width: 100%;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+}
+.bodyLeft {
+  width: 55%;
+}

@@ -4,9 +4,12 @@ import { CiSearch } from "react-icons/ci";
 import { FaUser, FaHeart, FaShoppingCart  } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import HeaderPfp from './HeaderPfp';
+import { useContext } from 'react';
+import { ProductList } from '../../Store/ProductStore';
 
 
 const Headers =()=>{
+    const {cartProductlist} = useContext(ProductList)
     return <>
     <div className={styles.navTopSection}>
         <ul>
@@ -30,7 +33,7 @@ const Headers =()=>{
             <i ><Link to='/profile-page'><HeaderPfp/></Link></i>
             <i ><Link to="/favorite-page"> <FaHeart /> </Link></i>
             <i ><Link to="/checkout-page"> <FaShoppingCart /></Link>
-            <sup className={styles.customBadge}> 1</sup>
+            <sup className={styles.customBadge}> {cartProductlist.length}</sup>
             </i>
         </div>
     </header>

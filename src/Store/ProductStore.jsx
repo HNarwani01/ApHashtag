@@ -1,8 +1,10 @@
-import { createContext, useEffect, useReducer } from "react";
+import { createContext, useEffect, useReducer, useState } from "react";
 
 export const ProductList = createContext({
     productlist:[],
-    AddInitialProducts:()=>{}
+    cartProductlist:[],
+    AddInitialProducts:()=>{},
+    AddTOCart:()=>{}
 })
 
 const productListReducer=(currentValue ,action)=>{
@@ -15,6 +17,7 @@ const productListReducer=(currentValue ,action)=>{
 
 const ProductProvider = ({ children }) => {
     const [ productlist, dispatchproductList ] = useReducer(productListReducer, [])
+    const [cartProductlist, setcartProductlist] = useState([])
     const AddInitialProducts=(products)=>{
         console.log(`inside the first fn`);
         console.log(products);
@@ -23,6 +26,28 @@ const ProductProvider = ({ children }) => {
             payload:[...products]
         })
     }
+    const AddTOCart=(productObject)=>{
+        let alreadyExist = false;
+        cartProductlist.map((product)=>{
+            if (product.id===productObject.id) {
+                alreadyExist=true;
+                product.quantity++
+            }
+        })
+        if (!alreadyExist) {
+            let newObject = {
+                id:productObject.id,
+                price:productObject.price,
+                thumbnail:productObject.thumbnail,
+                quantity:1,
+                title:productObject.title,
+                category:productObject.category
+            }
+            let tempCartList = [...cartProductlist,newObject]
+            setcartProductlist([...tempCartList])
+        }    
+    }
+    
     useEffect(() => {
         fetch('https://dummyjson.com/products')
             .then(res => res.json())
@@ -30,7 +55,9 @@ const ProductProvider = ({ children }) => {
     }, []);
     return <ProductList.Provider value={{
         productlist,
-        AddInitialProducts
+        cartProductlist,
+        AddInitialProducts,
+        AddTOCart
         }}>
         {children}
     </ProductList.Provider>

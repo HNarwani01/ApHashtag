@@ -1,0 +1,73 @@
+.bodyRight {
+    width: 40%;
+    text-align: center;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    height: 400px;
+    background-color: aliceblue;
+    padding: 2%;
+}
+
+.bodytotal {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0px auto;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.bodytotal h4 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-family: sans-serif;
+}
+.flexCenterApart{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 20px;
+    text-transform: capitalize;
+    align-items: center;
+    height: 10%;
+}
+.discount,.charges {
+    position: relative;
+}
+.discount::after{
+    position: absolute;
+    content: '';
+    width: 186%;
+    left: -43%;
+    height: 151%;
+    background-color: green;
+    opacity: 30%;
+    
+}
+    
+.charges::after{
+    position: absolute;
+    content: '';
+    width: 186%;
+    left: -43%;
+    height: 150%;
+    background-color: red;
+    opacity: 30%;
+    
+}
+
+.payNow {
+    width: 100%;
+    align-items: center;
+}
+.payNow button{
+    width: 50%;
+    align-items: center;
+    padding: 5px 0px;
+    border-radius: 10px;
+    background-color: burlywood;
+    border: none;
+    /* font-weight: 550; */
+    font-size: 20px;
+    cursor: pointer;
+}

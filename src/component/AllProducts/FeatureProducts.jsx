@@ -5,8 +5,6 @@ import SingleProduct from './SingleProduct';
 import { ProductList } from '../../Store/ProductStore';
 const FeatureProducts = () => {
     const { productlist } = useContext(ProductList)
-    console.log(`product page here `);
-    console.log(productlist);
     return <>
 
         <div className="container d-flex justify-content-center mt-100 ">
