@@ -1,0 +1,7 @@
+.sideFilterContainer{
+    width: 15vw;
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: capitalize;
+    border-top: 3px solid #555;
+}

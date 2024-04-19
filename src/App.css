@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Poppins&display=swap');
+
+:root {
+    --dark: #FF7F7F;
+    --bright: #FF66CC;
+    --light: #FFC0CB;
+    --heading-font: Montserrat, sans-serif;
+    --logo-font: "Madimi One", sans-serif;
+    --extra-dark: #cf1371;
+    /* Darker pink */
+    --extra-dark-red: #ae0029;
+    --body-size: 70%;
+
+    --item1-transform: translate(-100%, -5%) scale(1.5);
+    --item1-filter: blur(10px);
+    --item1-zIndex: 11;
+    --item1-opacity: 0;
+
+    --item2-transform: translate(0, 0);
+    --item2-filter: blur(0);
+    --item2-zIndex: 10;
+    --item2-opacity: 1;
+
+    --item3-transform: translate(40%, 10%) scale(0.8);
+    --item3-filter: blur(10px);
+    --item3-zIndex: 9;
+    --item3-opacity: 1;
+
+    --item4-transform: translate(70%, 20%) scale(0.6);
+    --item4-filter: blur(10px);
+    --item4-zIndex: 8;
+    --item4-opacity: 1;
+
+    --item5-transform: translate(100%, 25%) scale(0.4);
+    --item5-filter: blur(10px);
+    --item5-zIndex: 7;
+    --item5-opacity: 1;
+
+    --item6-transform: translate(130%, 30%) scale(0.2);
+    --item6-filter: blur(10px);
+    --item6-zIndex: 7;
+    --item6-opacity: 0;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+html {
+  overflow-x: hidden;
+  margin: 0;
+  perspective: 1000px;
+}
+
+body {
+  overflow: hidden;
+}
+i{
+  cursor: pointer;
+}
+.mid-heading{
+  width: 100%;
+  text-align: center;
+  font-family:Lato, sans-serif;
+  font-size:42px;
+  font-weight: 600;
+  margin: 3% 0px;
+}
+.PfpImage{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}

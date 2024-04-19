@@ -1,0 +1,35 @@
+.navFilterDiv{
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    border-top: 3px solid #555;
+    border-bottom: 3px solid #555;
+    border-radius: 2px;
+    align-items: center;
+
+    height: 10vh;
+}
+.navFilterLeft{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+    align-items: center;
+}
+.navFilterLeft h5{
+    font-size: 1.5rem;
+}
+.navFilterLeft select{
+    font-size: 20px;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--light);
+    outline: none;
+    cursor: pointer;
+}
+.navFilterRight{
+    margin-right: 3%;
+    font-size: 20px;
+    cursor: pointer;
+}

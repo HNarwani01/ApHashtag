@@ -1,0 +1,82 @@
+.navOuterDiv{
+    margin: 10px 0px;
+}
+
+.navPc {
+    width: 94vw;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0px auto;
+    height: 10vh;
+    /* background-color: blue; */
+    align-items: center;
+    list-style: none;
+    font-size: 20px;
+    gap: 1%;
+}
+
+.navPc li a {
+    text-decoration: none;
+    color: #555;
+}
+@media screen and (max-width:1300px) {
+    .navPc li a{
+        font-size: 16px;
+    }
+}
+
+.navPc .explore {
+    position: relative;
+    width: 6%;
+    text-align: center;
+    /* transform: translateX(50%); */
+}
+.navPc .explore a {
+    color: #c45c28;
+}
+.navPc .explore::after {
+    position: absolute;
+    content: '';
+    border-right: 2px solid #555;
+    height: 100%;
+    right: 0;
+}
+.navPc .explore::before {
+    position: absolute;
+    content: '';
+    border-left: 2px solid #555;
+    height: 100%;
+    left: 0;
+}
+
+.navPc li a:hover {
+    color: black;
+}
+
+.navMobileContainer {
+    display: none;
+}
+
+.navMobile {
+    width: 90vw;
+    height: 10vh;
+    margin: 0px auto;
+    overflow-x: auto;
+    display: flex;
+    gap: 5%;
+    justify-content: space-evenly;
+}
+
+.navMobile a img {
+    height: 100%;
+}
+
+@media screen and (max-width:1000px) {
+    .navPcContainer {
+        display: none;
+    }
+
+    .navMobileContainer {
+        display: block;
+    }
+}

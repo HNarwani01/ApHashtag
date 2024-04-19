@@ -1,0 +1,118 @@
+.navTopSection {
+    background-color: #fef6e5;
+    display: flex;
+    width: 100%;
+    padding: 0px 5%;
+    justify-content: space-between;
+    height: 7vh;
+    align-items: center;
+    text-transform: uppercase;
+    color: #555;
+    font-weight: 700;
+    font-family: calibri;
+}
+
+.navTopSection ul {
+    font-size: 13px;
+    display: flex;
+    gap: 2%;
+    width: 50%;
+    letter-spacing: 1px;
+    height: 100%;
+    margin-bottom: 0;
+    align-items: center;
+}
+.navTopSection div a{
+    color: #c45c28;
+    font-size: 25px;
+}
+@media screen and (max-width:700px) {
+    .navTopSection{
+        display: none;
+    }
+}
+
+/* logo container class */
+
+.logoContainer{
+    width: 100%;
+    padding: 0px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 30vh;
+    align-items: end;
+}
+.logo{
+    width: 30%;
+    font-weight: 700;
+    text-align: right;
+    margin-right: 10%;
+}
+.logo img{
+    width: 95%;
+    float: left;
+    cursor: pointer;
+}
+.logo p{
+    font-size: 15px;
+}
+.searchContainer{
+    width: 30%;
+    position:relative;
+    border: 1px solid #000;
+    border-radius: 30px;
+    height: 5vh;
+    margin-bottom: 15px;
+}
+.searchContainer input{
+    border: none;
+    background: transparent;
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    outline: none;
+    left: 3%;
+}
+.searchContainer i{
+    position: absolute;
+    right: 3%;
+    top: 35%;
+    transform: translateY(-50%);
+    font-size: 30px;
+}
+.iconsContainer i a{
+    color: #555;
+}
+.iconsContainer i a:hover{
+    color: #000;
+}
+.iconsContainer{
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+}
+.iconsContainer i{
+    font-size: 40px;
+}
+@media screen and (max-width:1000px) {
+    .logoContainer{
+        flex-wrap: wrap;
+        align-items: end;
+    }
+    .logoContainer .logo p{
+        display: none;
+    }
+    .logoContainer .searchContainer{
+        order: 2;
+        width: 100%;
+    }
+    .logoContainer .iconsContainer{
+        width: 20%;
+        justify-content: space-between;
+    }
+    .logoContainer .iconsContainer i{
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,32 @@
+.aosInit{
+    margin: 10px;
+    text-align: center;
+    width: 30%;
+    height: 15rem;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    padding: 0;
+    cursor: pointer;
+    overflow: hidden;
+}
+.noBG{
+    background-color: transparent !important;
+}
+.cardName{
+
+    width: 100%;
+    object-fit: contain;
+}
+@media screen and (max-width:768px) {
+    .aosInit{
+
+        width: 45%;
+        height: 15rem;
+    }
+}
+.imgDiv img{
+    transition: all 0.2s  ease-in-out;
+}
+.imgDiv:hover>img{
+    transform: scale(1.2);
+}
