@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import IndexCarosel from './component/IndexPage/indexCarosel.jsx'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import CheckoutPage from './component/Checkout/checkoutPage.jsx'
 import ProfilePage from './component/profilePage/ProfilePage.jsx'
 import BottomCard from './component/BottomCards.jsx'
 import ProductPageIntro from './component/AllProducts/ProductPageIntro.jsx'
@@ -11,6 +10,9 @@ import FeatureProducts from './component/AllProducts/FeatureProducts.jsx'
 import NotFoundPage from './component/NotFound/NotFoundPage.jsx'
 import ProductPreview from './component/AllProducts/ProductPreview.jsx'
 import BraPage from './component/BraPages/BraPage.jsx'
+import CheckoutPage from './component/Checkout/CheckoutPage.jsx'
+
+
 
 
 const route = createBrowserRouter([{path:'/',element:<App/>,children:[

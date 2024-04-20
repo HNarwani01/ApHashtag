@@ -22,22 +22,22 @@
     --item2-zIndex: 10;
     --item2-opacity: 1;
 
-    --item3-transform: translate(40%, 10%) scale(0.8);
+    --item3-transform: translate(55%, 10%) scale(0.8);
     --item3-filter: blur(10px);
     --item3-zIndex: 9;
     --item3-opacity: 1;
 
-    --item4-transform: translate(70%, 20%) scale(0.6);
+    --item4-transform: translate(100%, 20%) scale(0.6);
     --item4-filter: blur(10px);
     --item4-zIndex: 8;
     --item4-opacity: 1;
 
-    --item5-transform: translate(100%, 25%) scale(0.4);
+    --item5-transform: translate(150%, 25%) scale(0.4);
     --item5-filter: blur(10px);
     --item5-zIndex: 7;
     --item5-opacity: 1;
 
-    --item6-transform: translate(130%, 30%) scale(0.2);
+    --item6-transform: translate(160%, 30%) scale(0.2);
     --item6-filter: blur(10px);
     --item6-zIndex: 7;
     --item6-opacity: 0;
@@ -83,4 +83,7 @@ i{
 }
 .bodyLeft {
   width: 55%;
+}
+.container{
+  background-color: transparent !important;
 }

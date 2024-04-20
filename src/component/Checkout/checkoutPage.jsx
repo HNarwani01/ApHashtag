@@ -1,12 +1,13 @@
 import { useContext } from "react";
-import EmptyCart from "./EmptyCart";
-import { ProductList } from "../../Store/ProductStore";
-import NonEmptyCart from "./NonEmptyCart";
+import { ProductList } from "../../Store/ProductStore.jsx";
+import NonEmptyCart from "./NonEmptyCart.jsx";
+import EmptyCart from "./EmptyCart.jsx";
 
-const CheckoutPage =()=>{
+const CheckoutPage=()=>{
     const {cartProductlist} = useContext(ProductList)
+    
     return <>
-    {cartProductlist.length===0? <EmptyCart/>:<NonEmptyCart/>}
+        {cartProductlist.length===0 ? <EmptyCart/>  : <NonEmptyCart list={cartProductlist} />}
     </>
 }
 export default CheckoutPage;

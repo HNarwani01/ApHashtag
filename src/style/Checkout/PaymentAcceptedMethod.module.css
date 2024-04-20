@@ -1,0 +1,6 @@
+.payment{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+}
