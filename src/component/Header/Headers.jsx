@@ -22,7 +22,7 @@ const Headers =()=>{
     </div>
     <header className={styles.logoContainer}>
         <div className={styles.logo}>
-            <Link to='/'><img src="./src/assets/brand-logo.png" alt=""/></Link>
+            <img src="./src/assets/brand-logo.png" alt=""/>
             <p>Your Lingerir Experts. Female Owned.</p>
         </div>
         <div className={styles.searchContainer}>
