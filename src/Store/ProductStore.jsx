@@ -19,8 +19,6 @@ const ProductProvider = ({ children }) => {
     const [ productlist, dispatchproductList ] = useReducer(productListReducer, [])
     const [cartProductlist, setcartProductlist] = useState([])
     const AddInitialProducts=(products)=>{
-        console.log(`inside the first fn`);
-        console.log(products);
         dispatchproductList({
             type:'INITIAL_PRODUCTS',
             payload:[...products]
