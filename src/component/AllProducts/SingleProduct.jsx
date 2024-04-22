@@ -29,7 +29,7 @@ const SingleProduct = ({ product }) => {
                     <span className="text-center"><MdCurrencyRupee />{product.price}</span>
                     <div className="product-action">
                         <div className="product-action-style" >
-                            <Link to='' href="#"><i ><FaEye /></i></Link>
+                            <Link to={`/product-preview/${product.id}`} href="#"><i ><FaEye /></i></Link>
                             <a data-id={product.id} className={`addToCart `} onClick={() => { AddTOCart(product) }}>
                                 <label htmlFor={product.id}>
                                     <i ><FaShoppingCart /></i>
