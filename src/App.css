@@ -87,3 +87,6 @@ i{
 .container{
   background-color: transparent !important;
 }
+.hiddenCB{
+  display: none;
+}

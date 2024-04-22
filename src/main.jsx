@@ -11,6 +11,7 @@ import NotFoundPage from './component/NotFound/NotFoundPage.jsx'
 import ProductPreview from './component/AllProducts/ProductPreview.jsx'
 import BraPage from './component/BraPages/BraPage.jsx'
 import CheckoutPage from './component/Checkout/CheckoutPage.jsx'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 
