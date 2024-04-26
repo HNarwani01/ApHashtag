@@ -1,8 +1,39 @@
 import { FaPlus,FaMinus } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa";
 import { MdDelete,MdOutlineCurrencyRupee } from "react-icons/md";
+import { useContext, useEffect, useState } from "react";
+import { ProductList } from "../../Store/ProductStore";
+import '../../style/Checkout/CartProduct.css'
 
 const CartProduct = ({value}) => {
+    
+    const { cartProductlist,EditCartProductList } = useContext(ProductList);
+    const [product, setProduct] = useState(cartProductlist.find(product => product.id === value.id));
+    const [amount , setAmount] = useState(product.quantity)
+    const [price, setPrice] = useState(product.price)
+    useEffect(()=>{
+    },[product.quantity])
+
+
+    const handleQuantity=async (action)=>{
+        if (action==='INCREASE') {
+            setAmount(amount+1)
+            console.log('calling fn with ' + amount);
+            EditCartProductList('INCREASE_QUANTIY',product,amount+1)
+            
+        }else if (action==='DECREASE') {
+            if (amount>1) {
+                setAmount(amount-1)
+                console.log('calling fn with ' + amount);
+                EditCartProductList('DECREASE_QUANTIY',product,amount-1)
+            }
+            
+        }
+    }
+
+    
+
+
     return <>
         <div className="row">
             <div className="col-lg-3 col-md-12 mb-4 mb-lg-0">
@@ -37,17 +68,17 @@ const CartProduct = ({value}) => {
 
                 <div className="d-flex mb-4" style={{ maxWidth: "300px" }}>
                     <button data-mdb-button-init data-mdb-ripple-init className="btn btn-primary px-3 me-2"
-                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                        onClick={()=>{handleQuantity('DECREASE')}}>
                         <FaMinus />
                     </button>
 
                     <div data-mdb-input-init className="form-outline">
-                        <input id="form1" min="0" name="quantity" value="1" type="number" className="form-control" />
-                        <label className="form-label" for="form1">Quantity</label>
+                        <p className="displayQuantity">{amount}</p>
+                        
                     </div>
 
                     <button data-mdb-button-init data-mdb-ripple-init className="btn btn-primary px-3 ms-2"
-                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                        onClick={()=>{handleQuantity('INCREASE')}}>
                         <FaPlus />
                     </button>
                 </div>
@@ -55,7 +86,7 @@ const CartProduct = ({value}) => {
 
 
                 <p className="text-start text-md-center">
-                    <strong><MdOutlineCurrencyRupee /> {value.price}</strong>
+                    <strong><MdOutlineCurrencyRupee /> {price*amount}</strong>
                 </p>
 
             </div>

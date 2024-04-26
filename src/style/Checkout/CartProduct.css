@@ -1,0 +1,12 @@
+.displayQuantity{
+    text-align: center;
+    line-height: 20px;
+    font-size: 20px;
+    width: 50px;
+    padding-top: 10px;
+}
+.w-100{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}

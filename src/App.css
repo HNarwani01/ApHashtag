@@ -90,3 +90,7 @@ i{
 .hiddenCB{
   display: none;
 }
+
+.list-group {
+  --bs-list-group-bg : transparent !important;
+}

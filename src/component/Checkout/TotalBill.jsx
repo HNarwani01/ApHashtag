@@ -1,6 +1,19 @@
+import { useContext, useState ,useEffect } from "react";
+import { ProductList } from "../../Store/ProductStore";
+
+
 const TotalBill = ({value}) => {
-    let totalSum = 0
-    value.map(item=>totalSum += item.price)
+    const {cartProductlist} = useContext(ProductList);
+    const [totalBill, setTotalBill] = useState(0)
+    useEffect(()=>{
+        let tempvalue = 0
+        cartProductlist.map(item=>{
+            tempvalue += item.price*item.quantity
+        })
+        setTotalBill(tempvalue)
+    },[cartProductlist])
+
+
     return <>
         <div className="col-md-4">
             <div className="card mb-4">
@@ -12,7 +25,7 @@ const TotalBill = ({value}) => {
                         <li
                             className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
                             Products
-                            <span>${totalSum}</span>
+                            <span>$ {totalBill}</span>
                         </li>
                         <li className="list-group-item d-flex justify-content-between align-items-center px-0">
                             Shipping
@@ -26,7 +39,7 @@ const TotalBill = ({value}) => {
                                     <p className="mb-0">(including VAT)</p>
                                 </strong>
                             </div>
-                            <span><strong>$53.98</strong></span>
+                            <span><strong>$ 7</strong></span>
                         </li>
                     </ul>
 

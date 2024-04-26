@@ -170,3 +170,35 @@ img {
   height: 100px;
   object-fit: fill;
 }
+.customSizes , .customColors{
+  display: flex;
+  /* width: 50%; */
+  font-size: 1rem;
+  margin: 10px;
+  gap: 2%;
+}
+.customSizes button{
+  padding: 5px;
+  border-radius: 50%;
+  width: 50px;
+  aspect-ratio: 1/1;
+  
+}
+.customSizes .active , .customColors .active{
+  border: 1px solid var(--dark);
+  
+}
+.customColors .hide > i{
+  display: none;
+}
+.btn.active , .btn.hide{
+  width: 50px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+}
+.customColors .active{
+  color: #fff;
+}

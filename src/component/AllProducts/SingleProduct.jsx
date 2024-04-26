@@ -17,7 +17,7 @@ const SingleProduct = ({ product }) => {
         <input type="checkbox" className="hiddenCB" name="" id={product.id}  checked={isChecked}
         onChange={handleCheckboxChange}/>
         <div className={`col-md-3 btn ${isChecked ? 'position-relative' : ''}`}>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
                 <FaCheck />
             </span>
             <div className="product-wrapper mb-45 text-center">
