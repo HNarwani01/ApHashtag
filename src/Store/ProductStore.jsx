@@ -18,14 +18,7 @@ const productListReducer = (currentValue, action) => {
 
 const ProductProvider = ({ children }) => {
     const [productlist, dispatchproductList] = useReducer(productListReducer, [])
-    const [cartProductlist, setcartProductlist] = useState([{
-        category:"smartphones",
-        id:3,
-        price:1249,
-        quantity:1,
-        thumbnail:"https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
-        title:"Samsung Universe 9"
-    }])
+    const [cartProductlist, setcartProductlist] = useState([])
     const AddInitialProducts = (products) => {
         dispatchproductList({
             type: 'INITIAL_PRODUCTS',
